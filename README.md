@@ -1,6 +1,6 @@
 # GitHub Spreadsheet
 
-This project collect a set of ready to copy&paste function to import data from GitHub to Google Spreadsheet
+This project collect a set functions ready for copy&paste with the purpose import data from GitHub to Google Spreadsheet.
 
 ## List repositories
 
