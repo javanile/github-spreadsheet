@@ -1,7 +1,11 @@
 <?php
 
-$headers = $_SERVER;
+use GuzzleHttp\Client;
 
-foreach ($headers as $key => $value) {
-    echo $key . ',' . $value . PHP_EOL;
-}
+$client = new Client();
+
+$response = $client->request('GET', 'https://api.github.com/zen');
+
+$json = json_decode($response->getBody(), true);
+
+echo $json['name'];
