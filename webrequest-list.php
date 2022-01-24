@@ -4,7 +4,9 @@ use GuzzleHttp\Client;
 
 $client = new Client();
 
-$response = $client->request('GET', 'https://api.github.com/zen');
+$user = $_GET['user'] ?? 'javanile';
+
+$response = $client->request('GET', 'https://api.github.com/users/'.$user.'/repos');
 
 $json = json_decode($response->getBody(), true);
 
