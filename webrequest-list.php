@@ -8,6 +8,8 @@ $user = $_GET['user'] ?? 'javanile';
 
 $response = $client->request('GET', 'https://api.github.com/users/'.$user.'/repos');
 
-$json = json_decode($response->getBody()->getContents(), true);
+var_dump($response->getBody()->getContents());
 
-echo $json['name'];
+//$json = json_decode(, true);
+
+//echo $json['name'];
