@@ -8,8 +8,8 @@ $user = $_GET['user'] ?? 'javanile';
 
 $response = $client->request('GET', 'https://api.github.com/users/'.$user.'/repos');
 
-var_dump($response->getBody()->getContents());
+$repositories = json_decode($response->getBody()->getContents(), true);
 
-//$json = json_decode(, true);
-
-//echo $json['name'];
+foreach ($repositories as $repository) {
+  echo $repository['name'].PHP_EOL;
+}
